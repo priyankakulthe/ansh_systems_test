@@ -4,7 +4,7 @@ class Digital_calculator
     public function __construct()
     {
         $arguments              = array();
-        $arr_allowed_operations = array('sum');
+        $arr_allowed_operations = array('sum', 'add');
         $pattern                = '/[,]/';
     }
 
