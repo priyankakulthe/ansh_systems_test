@@ -1,4 +1,8 @@
 <?php
+/**
+ * Digital calculator is command line program in PHP which accepts the operation and numbers as an argument and returns the result 
+ */
+
 class Digital_calculator
 {
     public function __construct()
@@ -8,6 +12,11 @@ class Digital_calculator
         $pattern                = '/[,\n;]/';
     }
 
+    /** 
+     *  This function is called by default when we run this file
+     * @param  [array] comma array of operation and numbers
+     * @return [number] sum of arguments if correct and proper message if wrong args 
+     */
     public function index($arguments)
     {
         if (!isset($arguments) && sizeof($arguments) == 0) {
@@ -20,6 +29,11 @@ class Digital_calculator
         }
     }
 
+    /**
+     * This function will actually perform the operation supplied to function
+     * @param  [array] array of arguments like operation and numbers
+     * @return [number] returns the sum of numbers or as operation specified
+     */
     public function get_calculations($arguments)
     {
         array_shift($arguments);
@@ -36,4 +50,7 @@ class Digital_calculator
         }
     }
 }
+/**
+ * Developer Name: Priyanka Kulthe
+ */
 ?> 
