@@ -5,7 +5,7 @@ class Digital_calculator
     {
         $arguments              = array();
         $arr_allowed_operations = array('sum', 'add');
-        $pattern                = '/[,\n]/';
+        $pattern                = '/[,\n;]/';
     }
 
     public function index($arguments)
