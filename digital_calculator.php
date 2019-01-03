@@ -27,9 +27,12 @@ class Digital_calculator
         $arr_numbers = preg_split($pattern, $arguments[0]);
 
         if(!in_array($operation, $arr_allowed_operations)) {
-            return 'Invalid Operation';
+            print_r('Invalid Operation');
         } else {
-            return array_sum($arr_numbers);
+            if (min($arr_numbers) < 0)
+                print_r("Error: Negative numbers not allowed.");
+            else
+                print_r(array_sum($arr_numbers));
         }
     }
 }
